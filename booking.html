@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form - Sanctovia</title>
+  
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="index.php">Home</a>
+            <a href="AboutUs.html">About</a>
+            <a href="booking.html" class="active">Room reservation</a>
+            <a href="contact.php">Contact</a>
+        </nav>
+        <div class="brand-logo">
+            <h1>Sanctovia</h1>
+        </div>
+        <div class="nav-actions">
+            <a href="preview.php" class="icon-link"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></a>
+            <a href="login.html" class="icon-link"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        </div>
+    </header>
+
+    <main class="booking-page-container">
+        <div class="booking-header-title">
+            <h2>Reserve Your Stay</h2>
+            <p>Select your dates, choose your preferred luxury room, and complete your reservation.</p>
+        </div>
+
+        <form action="reserve.php" method="POST">
+          
+
+            <p>Select Room:<br>
+            <select name="room_id" required>
+                <option value="1">1. Single Room (₱1,000)</option>
+                <option value="2">2. Double Room (₱1,300)</option>
+                <option value="3">3. Deluxe Room (₱1,500)</option>
+                <option value="4">4. Family Room (₱2,500)</option>
+                <option value="5">5. Executive Suite (₱3,500)</option>
+                <option value="6">6. Honeymoon Suite (₱4,000)</option>
+            </select></p>
+
+            <p>Manage Reservation:<br>
+            <div class="action-buttons-group">
+                 <a href="view_reservation.php" class="btn-action-custom btn-view">
+    View Reservation
+</a>
+                 
+                <button type="button" class="btn-action-custom btn-edit">Edit Reservation</button>
+                <button type="button" class="btn-action-custom btn-delete">Delete Reservation</button>
+            </div>
+            <small><strong>Options:</strong> View, modify, or cancel your existing room bookings securely.</small></p>
+
+
+            <p>Address:<br>
+               <input type="text" name="address" required></p>
+
+            <p>Contact Number:<br>
+               <input type="tel" name="contact_number" required></p>
+            <p>Date of Check-in:<br>
+            <input type="date" name="checkin" required></p>
+
+            <p>Date of Check-out:<br>
+            <input type="date" name="checkout" required></p>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+</body>
+</html>

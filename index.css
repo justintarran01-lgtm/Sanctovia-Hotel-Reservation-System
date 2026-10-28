@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f4ef;
+  color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: #e3ddd5;
+  color: #111;
+}
+
+.brand-logo h1 {
+  font-family: 'Georgia', cursive, serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon-link {
+  color: #555;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.icon-link:hover {
+  background-color: #e3ddd5;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  background: linear-gradient(135deg, rgba(160, 115, 80, 0.85), rgba(120, 80, 50, 0.9));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #ffffff;
+}
+
+.hero-overlay-content h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero-overlay-content p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.btn-book-now {
+  background-color: #ff3b30;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(255, 59, 48, 0.3);
+  transition: background 0.2s;
+}
+
+.btn-book-now:hover {
+  background-color: #e03229;
+}
+
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  background-color: #ffffff;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-card {
+  background-color: #8c6248;
+  color: #ffffff;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.promo-card h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.promo-card p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.promo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #8c6248;
+}
+
+@media (max-width: 900px) {
+  .gallery-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-overlay-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    grid-template-columns: 1fr;
+  }
+  .hero-overlay-content {
+    width: 100%;
+    position: relative;
+    padding: 30px;
+  }
+  .hero-section {
+    height: auto;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
